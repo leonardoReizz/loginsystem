@@ -1,0 +1,149 @@
+@use "../../styles/_util" as *
+    
+.container
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(to left, $main 55%, $white 55%)
+
+
+    @media (max-width: 832px)
+        background: linear-gradient(to left, $main 50%, $white 50%)
+    .limit
+        height: 70vh
+        width: 80vw
+        max-width: 1000px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        @media (max-width: 830px)
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 100vh
+        @media (max-width: 630px)
+            width: 90vw
+
+
+        .content
+            display: grid
+            grid-template-columns: 40% 60%
+            height: 100%
+            width: 100%
+            box-shadow: 0px 1px 100px -20px $black
+           
+            @media (max-width: 830px)
+                display: flex        
+                align-items: center
+                justify-content: center
+                width: 100%
+                height: 80vh
+                border-radius: 2rem
+            
+            .img
+                display: flex
+                align-items: center
+                justify-content: center
+                background: transparent
+                width: 100%
+                img
+                    width: 80%
+
+                @media (max-width: 830px)
+                    display: none
+
+            .form
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                background: $main
+                gap: 1rem
+                position: relative
+                background: transparent
+                margin-top: 10rem
+               
+                @media (max-width: 830px)
+                    background: $white
+                    width: 100%
+                    height: 100%
+                    margin: 0
+                    border-radius: 2rem
+
+                ::placeholder
+                    color: $input-color
+                    @media (max-width: 830px)
+                        color: $white
+
+
+                h1
+                    position: absolute
+                    top: -5rem
+                    font-size: 4rem
+                    color: $white
+                    font-family: "Dancing Script", sans-serif
+                    @media (max-width: 830px)
+                        color: $black
+                        top: 6rem
+                        font-size: 4rem
+                
+                input
+                    width: 60%
+                    outline: none
+                    padding: 1rem
+                    border: none
+                    border-radius: 5rem
+                    background: $white
+                    color: $main
+                    font-weight: bold
+                    font-size: 1rem
+
+                    @media (max-width: 830px)
+                        background: $input-color
+                        color: $white
+                    @media (max-width: 630px)
+                        width: 80%
+
+                button
+                    width: 170px
+                    padding: 1rem
+                    color: $white
+                    border-radius: 5rem
+                    background: transparent
+                    border: 2px solid $white
+                    cursor: pointer
+                    margin-top: 1rem
+                    text-transform: uppercase
+                    font-weight: bold
+
+                    transition: 0.2s ease-in-out
+                    &:hover
+                        border: 2px solid $black
+                        color: $black
+                        box-shadow: 0px 1px 100px -20px $black
+
+                    @media (max-width: 830px)
+                        border: 2px solid $black
+                        color: $black
+
+
+                p
+                    font-weight: bold
+                    color: $white
+                    @media (max-width: 830px)
+                        color: $black
+                        position: absolute
+                        bottom: 2rem
+
+                    a
+                        color: $input-color
+                        text-decoration: none
+                        transition: 0.2s ease-in-out
+
+                        &:hover
+                            text-decoration: underline
+                            box-shadow: 0px 1px 100px -20px $black
+
