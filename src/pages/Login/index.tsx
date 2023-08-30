@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.sass";
 import loginImg from "../../assets/login-img.jpg";
 import { Link, useNavigate } from "react-router-dom";
-import { toast, ToastContainer, ToastOptions } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { toastOptions } from "../../utils/toastOptions";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { isTypeAssertionExpression } from "typescript";
 
 export function Login(){
     const [email, setEmail] = useState("");
@@ -28,7 +27,7 @@ export function Login(){
             toast.error("Invalid Password", toastOptions)
         } else {
             const toastId = toast.loading("Loading...", toastOptions)
-            axios.post("https://loginsystembackend.vercel.app/login",{
+            axios.post("https://loginsystembackend.leonardo-reis.com/login",{
                 email,
                 pass: password
             })

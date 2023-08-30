@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Lottie from "react-lottie"
 import styles from "./styles.module.sass";
-import congratulationImg  from "../../assets/congratulation.svg";
 import { defaultOptionsCongrats } from "../../utils/lottieOptions";
 
 

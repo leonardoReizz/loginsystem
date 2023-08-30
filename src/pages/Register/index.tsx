@@ -35,7 +35,7 @@ export function Register(){
             toast.error("Enter a Valid Email", toastOptions);
         }else{
             const toastId = toast.loading("Loading...", toastOptions);
-            axios.post("https://loginsystembackend.vercel.app/register", {
+            axios.post("https://loginsystembackend.leonardo-reis.com/register", {
                 fullName : name,
                 email,
                 pass : password
