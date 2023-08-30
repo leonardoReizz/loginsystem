@@ -1,9 +1,8 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import Lottie from "react-lottie"
+import Lottie from "react-lottie-player"
 import styles from "./styles.module.sass";
-import { defaultOptionsCongrats } from "../../utils/lottieOptions";
-
+import animationCongrats from "../../assets/congrats.json";
 
 export function Home(){
     const navigate = useNavigate();
@@ -23,11 +22,9 @@ export function Home(){
             <div className={styles.container}>
                 <div className={styles.content}>
                     <Lottie 
-                        options={defaultOptionsCongrats}
-                        height={250}
-                        width={250}
-                        isStopped={false}
-                        isPaused={false}
+                        play={true}
+                        loop={false}
+                        animationData={animationCongrats}
                     />
                     <h2>Successfully Logged In</h2>
                     <button
